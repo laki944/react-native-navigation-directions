@@ -1,6 +1,6 @@
 {
   "name": "react-native-navigation-directions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,10 @@
   "keywords": [
     "react",
     "react-native",
-    "react-native",
-    "maps"
+    "maps",
+    "directions",
+    "google maps",
+    "apple maps"
   ],
   "author": "laki944",
   "license": "MIT",
