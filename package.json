@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/laki944/react-native-navigation-directions/issues"
   },
-  "homepage": "https://github.com/laki944/react-native-navigation-directions#readme"
+  "homepage": "https://github.com/laki944/react-native-navigation-directions#readme",
+  "dependencies": {
+    "is-valid-coordinates": "1.0.0"
+  }
 }
