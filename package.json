@@ -1,0 +1,30 @@
+{
+  "name": "react-native-navigation-directions",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laki944/react-native-navigation-directions.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "maps",
+    "directions",
+    "google maps",
+    "apple maps"
+  ],
+  "author": "laki944",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laki944/react-native-navigation-directions/issues"
+  },
+  "homepage": "https://github.com/laki944/react-native-navigation-directions#readme",
+  "dependencies": {
+    "is-valid-coordinates": "1.0.0"
+  }
+}
