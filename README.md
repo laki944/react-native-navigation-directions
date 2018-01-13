@@ -43,3 +43,8 @@ A simple module which allows you to open default navigation app(**IOS**: Apple M
 	  }
 	}
     
+
+**Issues**
+----------
+Feel free to submit issues and enhancement requests.
+
