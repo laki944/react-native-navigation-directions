@@ -4,9 +4,15 @@
 
 # react-native-navigation-directions
 
-A simple module which allows you to open default navigation app(**IOS**: Apple Maps, **Android**: Google Maps) with drive direction between two points. After open the navigation app OpenMapDirections receive callback. Also work with the EXPO(https://expo.io/).
+A simple react-native module which allows you to open default navigation app(**IOS**: Apple Maps, **Android**: Google Maps) with drive direction between two points. After open the navigation app OpenMapDirections receive callback. Also work with the EXPO(https://expo.io/).
 
 ![alt text](https://media.giphy.com/media/3oFzmgxYq1MctUbXTW/giphy.gif) ![alt text](https://media.giphy.com/media/d3ess97l8lQ5Cx6E/giphy.gif)
+
+**Installation**
+----------
+    npm i react-native-navigation-directions --save
+    or
+    yarn add react-native-navigation-directions
 
 **Example:**
 
