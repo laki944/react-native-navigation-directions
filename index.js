@@ -24,7 +24,7 @@ const _openApp = (url) => new Promise((resolve, reject) => {
 
 const _checkParameters = (param) => {
 	if (isValidCoordinates.longitude(param.longitude) && isValidCoordinates.latitude(param.latitude)) {
-		return `${param.longitude},${param.latitude}`
+		return `${param.latitude},${param.longitude}`
 	}
 
 	return null;
