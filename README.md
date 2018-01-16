@@ -14,9 +14,17 @@ A simple react-native module which allows you to open default navigation app(**I
     or
     yarn add react-native-navigation-directions
 
+**Props:**
+
+| Prop |Type| Required| Note |
+|--|--|--|--|
+|startPoint| Object | false | Start point for directions, if this prop is null the start point is device location.
+|endPoint| Object |true| This is the end position and this prop cannot be empty.
+|transportType|String|true| Available values: d => (by car), w => (by foot), r => (by public transit). If you don’t specify any value, Maps uses the user’s preferred transport type or the previous setting.
+
 **Example:**
 
-    import { OpenMapDirections} from 'react-native-navigation-directions';
+    import { OpenMapDirections } from 'react-native-navigation-directions';
     
 	export default class App extends React.Component {
 	 _callShowDirections = () => {
@@ -30,7 +38,9 @@ A simple react-native module which allows you to open default navigation app(**I
 	      latitude: 38.5722429
 	    }
 
-	    OpenMapDirections(startPoint, endPoint).then(res => {
+			const transportPlan = 'w';
+
+	    OpenMapDirections(startPoint, endPoint, transportPlan).then(res => {
 	      console.log(res)
 	    });
 	  }
