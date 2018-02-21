@@ -24,6 +24,8 @@ const _openApp = (url) => new Promise((resolve, reject) => {
 });
 
 const _checkParameters = (param) => {
+	if (param === null || param === undefined) { return null; }
+
 	if (isValidCoordinates.longitude(param.longitude) && isValidCoordinates.latitude(param.latitude)) {
 		return `${param.latitude},${param.longitude}`
 	}
@@ -37,5 +39,5 @@ const _checkTransportParameter = (param) => {
 		return _transportType;
 	}
 
-	return null;
+	return 'w';
 }
