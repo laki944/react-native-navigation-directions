@@ -1,10 +1,9 @@
 {
   "name": "react-native-navigation-directions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laki944/react-native-navigation-directions.git"
