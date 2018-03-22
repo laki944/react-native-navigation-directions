@@ -4,9 +4,10 @@ import isValidCoordinates from 'is-valid-coordinates';
 const PLATFORM = Platform.OS;
 
 export const OpenMapDirections = (frmCoord = null, toCoord, transportType) => new Promise((resolve, reject) => {
+	const _toCoord;
 	const _frmCoord = _checkParameters(frmCoord) !== null ? `?saddr=${_checkParameters(frmCoord)}` : '';
 	if (_checkParameters(toCoord) !== null) {
-		const _toCoord = `&daddr=${_checkParameters(toCoord)}`
+		_toCoord = `&daddr=${_checkParameters(toCoord)}`
 	} else {
 		throw new Error('You need to pass a valid endpoint(number)')
 	};
