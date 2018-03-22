@@ -4,8 +4,13 @@ import isValidCoordinates from 'is-valid-coordinates';
 const PLATFORM = Platform.OS;
 
 export const OpenMapDirections = (frmCoord = null, toCoord, transportType) => new Promise((resolve, reject) => {
+	let _toCoord;
 	const _frmCoord = _checkParameters(frmCoord) !== null ? `?saddr=${_checkParameters(frmCoord)}` : '';
-	const _toCoord = _checkParameters(toCoord) !== null ? `&daddr=${_checkParameters(toCoord)}` : '';
+	if (_checkParameters(toCoord) !== null) {
+		_toCoord = `&daddr=${_checkParameters(toCoord)}`
+	} else {
+		throw new Error('You need to pass a valid endpoint(number)')
+	};
 	const _transportType = _checkTransportParameter(transportType) !== null ? `&dirflg=${_checkTransportParameter(transportType)}` : '';
 	const url = `${PLATFORM === 'ios' ? `http://maps.apple.com/` : 'http://maps.google.com/'}${_frmCoord}${_toCoord}${_transportType}`;
 	_openApp(url).then(result => { resolve(result) });
@@ -24,7 +29,7 @@ const _openApp = (url) => new Promise((resolve, reject) => {
 });
 
 const _checkParameters = (param) => {
-	if (param === null || param === undefined) { return null; }
+	if (param === null || param === undefined || typeof param === 'string') { return null; }
 
 	if (isValidCoordinates.longitude(param.longitude) && isValidCoordinates.latitude(param.latitude)) {
 		return `${param.latitude},${param.longitude}`
