@@ -4,7 +4,7 @@ import isValidCoordinates from 'is-valid-coordinates';
 const PLATFORM = Platform.OS;
 
 export const OpenMapDirections = (frmCoord = null, toCoord, transportType) => new Promise((resolve, reject) => {
-	const _toCoord;
+	let _toCoord;
 	const _frmCoord = _checkParameters(frmCoord) !== null ? `?saddr=${_checkParameters(frmCoord)}` : '';
 	if (_checkParameters(toCoord) !== null) {
 		_toCoord = `&daddr=${_checkParameters(toCoord)}`
