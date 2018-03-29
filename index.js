@@ -29,7 +29,7 @@ const _openApp = (url) => new Promise((resolve, reject) => {
 });
 
 const _checkParameters = (param) => {
-	if (param === null || param === undefined || typeof param === 'string') { return null; }
+	if (param === null || param === undefined || typeof param.latitude === 'string' || typeof param.longitude === 'string') { return null; }
 
 	if (isValidCoordinates.longitude(param.longitude) && isValidCoordinates.latitude(param.latitude)) {
 		return `${param.latitude},${param.longitude}`
