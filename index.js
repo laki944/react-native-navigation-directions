@@ -12,7 +12,7 @@ export const OpenMapDirections = (frmCoord = null, toCoord, transportType) => ne
 		throw new Error('You need to pass a valid endpoint(number)')
 	};
 	const _transportType = _checkTransportParameter(transportType) !== null ? `&dirflg=${_checkTransportParameter(transportType)}` : '';
-	const url = `${PLATFORM === 'ios' ? `http://maps.apple.com/` : 'http://maps.google.com/'}${_frmCoord}${_toCoord}${_transportType}`;
+	const url = `${PLATFORM === 'ios' ? `https://maps.apple.com/` : 'https://maps.google.com/'}${_frmCoord}${_toCoord}${_transportType}`;
 	_openApp(url).then(result => { resolve(result) });
 });
 
@@ -29,7 +29,7 @@ const _openApp = (url) => new Promise((resolve, reject) => {
 });
 
 const _checkParameters = (param) => {
-	if (param === null || param === undefined || typeof param === 'string') { return null; }
+	if (param === null || param === undefined || typeof param.latitude === 'string' || typeof param.longitude === 'string') { return null; }
 
 	if (isValidCoordinates.longitude(param.longitude) && isValidCoordinates.latitude(param.latitude)) {
 		return `${param.latitude},${param.longitude}`
