@@ -40,7 +40,7 @@ const _checkParameters = (param) => {
 
 const _checkTransportParameter = (param) => {
 	const _transportType = param.toLowerCase();
-	if (_transportType === 'd' || _transportType === 'w' || _transportType === 'r') {
+	if (_transportType === 'd' || _transportType === 'w' || _transportType === 'r' || _transportType === 'b') {
 		return _transportType;
 	}
 
