@@ -1,6 +1,7 @@
 [![NPM version](https://img.shields.io/npm/v/react-native-navigation-directions.svg?style=flat-square)](https://www.npmjs.com/package/react-native-navigation-directions)
 [![Build](https://travis-ci.org/laki944/react-native-navigation-directions.svg?branch=master)](https://travis-ci.org/laki944/react-native-navigation-directions)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+![npm](https://img.shields.io/npm/dm/react-native-navigation-directions)
 
 # react-native-navigation-directions
 
