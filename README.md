@@ -21,7 +21,7 @@ A simple react-native module which allows you to open default navigation app(**I
 |--|--|--|--|
 |startPoint| Object | false | Start point for directions, if this prop is null the start point is device location.
 |endPoint| Object |true| This is the end position and this prop cannot be empty.
-|transportType|String|true| Available values: d => (by car), w => (by foot), r => (by public transit) or b => (biking). If you don’t specify any value, Maps uses the user’s preferred transport type or the previous setting.
+|transportType|String|true| Available values: d => driving, w => walking, r => transit or b => bicycling. If you don’t specify any value, Maps uses the user’s preferred transport type or the previous setting.
 
 **Example:**
 ```javascript
